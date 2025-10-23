@@ -17,7 +17,6 @@ The app was built using Java and XML, with a focus on clean, modular code and a 
 * 💾 Local score saving and progress tracking
 
 # Tech Stack 🧠
-Category	Technology
-Language	Java
-UI	XML Layouts
-Tools	Android Studio
+Java
+XML Layouts
+Android Studio
