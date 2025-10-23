@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraint_layout"
+    android:background="@color/white"
+    tools:context=".ShapesGameActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="ضع كل شكل في مكانه الصحيح"
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="175dp"
+        android:contentDescription="circle"
+        android:src="@drawable/circle_shape"
+        android:tag="circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/square"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="square"
+        android:src="@drawable/square_shape"
+        android:tag="square"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/triangle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="175dp"
+        android:contentDescription="triangle"
+        android:src="@drawable/triangle_shape"
+        android:tag="triangle"
+        app:layout_constraintEnd_toStartOf="@+id/circle"
+        app:layout_constraintStart_toEndOf="@+id/square"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/circle_target"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/circle_target"
+        android:contentDescription="circle"
+        app:layout_constraintBottom_toBottomOf="@+id/square_target"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/square_target"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/square_target"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="175dp"
+        android:background="@drawable/square_target"
+        android:contentDescription="square"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/circle_target"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toEndOf="@+id/triangle_target" />
+
+    <ImageView
+        android:id="@+id/triangle_target"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/triangle_target"
+        android:contentDescription="triangle"
+        app:layout_constraintBottom_toBottomOf="@+id/square_target"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/square_target"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

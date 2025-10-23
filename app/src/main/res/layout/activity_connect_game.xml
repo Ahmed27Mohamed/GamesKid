@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraint_layout"
+    android:background="@color/white"
+    tools:context=".ConnectGameActivity">
+
+    <ImageView
+        android:id="@+id/redCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="175dp"
+        android:contentDescription="red"
+        android:src="@drawable/circle_shape"
+        android:tag="red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/greenCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="green"
+        android:src="@drawable/circle_shape"
+        android:tag="green"
+        app:tint="@android:color/holo_green_light"
+        android:backgroundTint="@android:color/holo_green_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/blueCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="175dp"
+        android:contentDescription="blue"
+        android:src="@drawable/circle_shape"
+        android:tag="blue"
+        app:layout_constraintEnd_toStartOf="@+id/redCircle"
+        app:layout_constraintStart_toEndOf="@+id/greenCircle"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@android:color/holo_blue_light"
+        app:tint="@android:color/holo_blue_light" />
+
+    <ImageView
+        android:id="@+id/blue_target"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/circle_target"
+        android:backgroundTint="@android:color/holo_blue_light"
+        app:tint="@android:color/holo_blue_light"
+        android:contentDescription="blue"
+        app:layout_constraintBottom_toBottomOf="@+id/red_target"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/green_target"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/green_target"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="175dp"
+        android:background="@drawable/circle_shape"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:contentDescription="green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/blue_target"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toEndOf="@+id/red_target" />
+
+    <ImageView
+        android:id="@+id/red_target"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/circle_shape"
+        android:contentDescription="red"
+        app:layout_constraintBottom_toBottomOf="@+id/blue_target"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/green_target"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
